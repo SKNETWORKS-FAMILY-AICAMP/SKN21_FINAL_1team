@@ -1,9 +1,6 @@
-# Our Team
-
 <div align="center" style="color: #A6C1A6;">
 
-<h1><i><b>Kalpie</b></i></h1>
-<img width="250" height="250" alt="kalpie" src="assets/kaipie.png" />
+<img width="400" alt="kalpie" src="assets/kaipie.png" />
 <br>
 <i>Our project is Notebooklm benchmarking on opensource.</i>
 <br>
@@ -17,10 +14,10 @@
 
 <table>
   <tr>
-    <td align="center"><a href="https://github.com/nature0022"><img src="assets/kaipie-profile.png" width="150px;" alt="">
-    <td align="center"><a href="https://github.com/Ne-eun"><img src="assets/kaipie-profile.png" width="150px;" alt="">
-    <td align="center"><a href="https://github.com/reasonableplan"><img src="assets/kaipie-profile.png" width="150px;" alt="">
-    <td align="center"><a href="https://github.com/Wjaehyun"><img src="assets/kaipie-profile.png" width="150px;" alt="">
+    <td align="center"><a href="https://github.com/nature0022"><img src="assets/kalpie-profile.png" width="150px;" alt="">
+    <td align="center"><a href="https://github.com/Ne-eun"><img src="assets/kalpie-profile.png" width="150px;" alt="">
+    <td align="center"><a href="https://github.com/reasonableplan"><img src="assets/kalpie-profile.png" width="150px;" alt="">
+    <td align="center"><a href="https://github.com/Wjaehyun"><img src="assets/kalpie-profile.png" width="150px;" alt="">
   </tr>
   <tr>
     <td align="center"><strong>이명준</strong></td>
