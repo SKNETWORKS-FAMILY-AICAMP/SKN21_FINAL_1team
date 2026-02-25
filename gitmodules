@@ -1,0 +1,18 @@
+[submodule "organization"]
+    path = organization
+    url = https://github.com/skn21-final-1team
+[submodule "backend"]
+    path = backend
+    url = https://github.com/skn21-final-1team/backend
+[submodule "frontend"]
+    path = frontend
+    url = https://github.com/skn21-final-1team/frontend
+[submodule "modelling"]
+    path = modelling
+    url = https://github.com/skn21-final-1team/modelling
+[submodule "data"]
+    path = data
+    url = https://github.com/skn21-final-1team/data
+[submodule "extension"]
+    path = extension
+    url = https://github.com/skn21-final-1team/extension
