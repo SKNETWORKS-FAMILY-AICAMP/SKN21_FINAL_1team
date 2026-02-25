@@ -2,7 +2,7 @@
 
 <img width="400" alt="kalpie" src="assets/kaipie.png" />
 <br>
-<i>Our project is Notebooklm benchmarking on opensource.</i>
+<i>Kalpie: An open-source, AI-native knowledge management platform inspired by NotebookLM.</i>
 <br>
 [Kalpie](https://github.com/skn21-final-1team)
 
