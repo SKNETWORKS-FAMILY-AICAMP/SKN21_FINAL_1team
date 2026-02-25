@@ -6,6 +6,8 @@
 <img width="250" height="250" alt="kalpie" src="https://github.com/SKN21_FINAL_1team/assets/kaipie.png" />
 <br>
 <i>Our project is Notebooklm benchmarking on opensource.</i>
+[Kalpie](https://github.com/skn21-final-1team)
+
 </div>
 
 <br>
