@@ -42,7 +42,6 @@
 | AI/ML Engineer     | RAG 파이프라인 설계, 임베딩 모델 최적화, 프롬프트 엔지니어링, LangGraph 에이전트 로직 설계              |
 | DevOps             | Docker를 이용한 배포 환경 구축, 서버 운영 관리                                                          |
 
-
 ## 프로젝트 주제
 
 **사용자의 브라우저 북마크 및 웹 URL을 지식 베이스로 활용하는 오픈소스 RAG(검색 증강 생성) 서비스**
@@ -76,8 +75,6 @@
 - **Open Source Strategy**: 핵심 엔진은 Github에 공개하여 커뮤니티 기여 유도
 - **B2B 확장**: 기업 내 내부 위키/문서 링크를 기반으로 한 사내 지식 베이스 솔루션으로 커스텀 제공
 - **Managed Service**: 인프라 관리가 어려운 사용자를 위해 소액의 구독형 호스팅 서비스(SaaS) 제공 가능
-
-`<br><br>`
 
 ## 수집 데이터 개요
 
@@ -518,12 +515,12 @@ LangGraph 기반 QA 에이전트의 노드 흐름:
 
 상세 내용은 아래 문서에서 확인할 수 있습니다.
 
-| 문서 | 설명 |
-| ---- | ---- |
-| [웹 애플리케이션 기능 테스트 보고서](../backend/eval/results/test_report.md) | UI/UX 기능 테스트 전 항목 결과 |
-| [RAG 평가 시스템 문서](../backend/eval/results/report.md) | 평가 파이프라인 설계 및 코드 구조 |
-| [서비스 아키텍처 문서](../backend/eval/results/architecture.md) | 컴포넌트 다이어그램 및 시퀀스 다이어그램 |
-| [평가 상세 결과 (JSON)](../backend/eval/results/) | 버전별·모델별 케이스 단위 수치 |
+| 문서                                                                      | 설명                                     |
+| ------------------------------------------------------------------------- | ---------------------------------------- |
+| [웹 애플리케이션 기능 테스트 보고서](../backend/eval/results/test_report.md) | UI/UX 기능 테스트 전 항목 결과           |
+| [RAG 평가 시스템 문서](../backend/eval/results/report.md)                    | 평가 파이프라인 설계 및 코드 구조        |
+| [서비스 아키텍처 문서](../backend/eval/results/architecture.md)              | 컴포넌트 다이어그램 및 시퀀스 다이어그램 |
+| [평가 상세 결과 (JSON)](../backend/eval/results/)                            | 버전별·모델별 케이스 단위 수치          |
 
 ---
 
