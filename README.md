@@ -42,7 +42,6 @@
 | AI/ML Engineer     | RAG 파이프라인 설계, 임베딩 모델 최적화, 프롬프트 엔지니어링, LangGraph 에이전트 로직 설계              |
 | DevOps             | Docker를 이용한 배포 환경 구축, 서버 운영 관리                                                          |
 
-`<br><br>`
 
 ## 프로젝트 주제
 
