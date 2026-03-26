@@ -33,16 +33,16 @@
   </tr>
 </table>
 <br>
-  
-| 역할 | 주요 업무 |
-|------|-----------|
-| Project Manager | 요구사항 구체화, 일정 관리, 오픈소스 라이선스 검토 |
-| Frontend Developer | Next.js 기반 UI 구현, 북마크 수집용 확장프로그램 구현, 챗 인터페이스 구축, 수집된 자료 기반 컨텐츠 제작 |
-| Backend Developer | FastAPI 서버 구축, 웹 크롤링 로직 및 데이터 전처리 파이프라인 설계 |
-| AI/ML Engineer | RAG 파이프라인 설계, 임베딩 모델 최적화, 프롬프트 엔지니어링, LangGraph 에이전트 로직 설계 |
-| DevOps | Docker를 이용한 배포 환경 구축, 서버 운영 관리 |  
 
-<br><br>
+| 역할               | 주요 업무                                                                                               |
+| ------------------ | ------------------------------------------------------------------------------------------------------- |
+| Project Manager    | 요구사항 구체화, 일정 관리, 오픈소스 라이선스 검토                                                      |
+| Frontend Developer | Next.js 기반 UI 구현, 북마크 수집용 확장프로그램 구현, 챗 인터페이스 구축, 수집된 자료 기반 컨텐츠 제작 |
+| Backend Developer  | FastAPI 서버 구축, 웹 크롤링 로직 및 데이터 전처리 파이프라인 설계                                      |
+| AI/ML Engineer     | RAG 파이프라인 설계, 임베딩 모델 최적화, 프롬프트 엔지니어링, LangGraph 에이전트 로직 설계              |
+| DevOps             | Docker를 이용한 배포 환경 구축, 서버 운영 관리                                                          |
+
+`<br><br>`
 
 ## 프로젝트 주제
 
@@ -58,7 +58,7 @@
 - **기존 서비스의 폐쇄성**: NotebookLM 등은 훌륭하지만 데이터 프라이버시나 모델 선택의 자유도가 낮음
 - **비용 부담**: 유료 LLM API를 사용하여 개인 지식 베이스를 구축하기에는 지속적인 비용 발생 우려
 
-**해결책**: 무료/오픈소스 모델(Llama 3, Mistral 등)을 활용하여 누구나 무료로 개인 서버나 로컬에서 운영할 수 있는 환경 제공
+**해결책**: EXAONE-4.0-32B 등 오픈소스 모델과 GPT-4o-mini 등 API 모델을 선택적으로 활용하여 누구나 자신의 환경에 맞게 운영할 수 있는 환경 제공
 
 <br>
 
@@ -66,11 +66,11 @@
 
 ### 시장 조사
 
-| 항목 | 내용 |
-|------|------|
-| 타겟 | 연구자, 개발자, 대학생 등 방대한 웹 정보를 수집하지만 관리에 어려움을 느끼는 사용자 |
-| 유사 서비스 | Google NotebookLM, Perplexity, Coral(Cohere) |
-| 차별점 | '북마크'라는 기존 습관을 데이터 소스로 활용하며, 완전한 오픈소스 및 로컬 실행 옵션 제공 |
+| 항목        | 내용                                                                                    |
+| ----------- | --------------------------------------------------------------------------------------- |
+| 타겟        | 연구자, 개발자, 대학생 등 방대한 웹 정보를 수집하지만 관리에 어려움을 느끼는 사용자     |
+| 유사 서비스 | Google NotebookLM, Perplexity, Coral(Cohere)                                            |
+| 차별점      | '북마크'라는 기존 습관을 데이터 소스로 활용하며, 완전한 오픈소스 및 로컬 실행 옵션 제공 |
 
 ### BM (Business Model)
 
@@ -78,12 +78,12 @@
 - **B2B 확장**: 기업 내 내부 위키/문서 링크를 기반으로 한 사내 지식 베이스 솔루션으로 커스텀 제공
 - **Managed Service**: 인프라 관리가 어려운 사용자를 위해 소액의 구독형 호스팅 서비스(SaaS) 제공 가능
 
-<br><br>
+`<br><br>`
 
 ## 수집 데이터 개요
 
-| 데이터명 | 수집 대상 | 수집 목적 | 사용 예정 기능 | 출처/저작권 |
-|---------|---------|---------|-------------|----------|
+| 데이터명                     | 수집 대상                    | 수집 목적                                                                                              | 사용 예정 기능                                             | 출처/저작권                                                           |
+| ---------------------------- | ---------------------------- | ------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------- | --------------------------------------------------------------------- |
 | 웹 페이지 추출 텍스트 데이터 | 사용자가 입력한 웹페이지 URL | NotebookLM 벤치마킹을 위한 사용자 맞춤형 문서 기반 QA, 텍스트 청킹(Chunking) 및 임베딩(Embedding) 처리 | 웹페이지 텍스트 추출, Markdown 변환, 청킹 및 벡터화 전처리 | 사용자가 입력한 불특정 웹사이트이며, 각 웹사이트의 저작권 정책에 따름 |
 
 <br>
@@ -97,9 +97,29 @@
 
 ### 수집 도구 및 스크립트
 
-**사용한 언어/라이브러리**: Python / `urllib.robotparser`(robots.txt 확인), `trafilatura`(정적크롤링), `BeautifulSoup`(DuckDuckGo 우회 크롤링), `playwright`(동적 크롤링 및 렌더링)
+**사용한 언어/라이브러리**: Python / `urllib.robotparser`(robots.txt 확인), `trafilatura`(정적 크롤링), `BeautifulSoup`(DuckDuckGo 우회 크롤링), `playwright`(동적 크롤링 및 렌더링)
 
 **자동화 여부 및 주기**: 실제 유저가 URL을 입력할 때마다 실시간으로 자동화된 파이프라인 실행
+
+### ETL 파이프라인
+
+크롤링 이후 전처리 및 적재까지의 전체 흐름:
+
+```
+① Extract  : HybridClient (Trafilatura → Playwright 폴백)
+② Transform
+   - MarkdownPreprocessor  : 공백·HTML·노이즈 정규화
+   - vLLM refine            : Llama-3.1-8B-Instruct 기반 내용 정제
+   - vLLM summarize         : 요약 생성
+   - HierarchicalPrependChunker
+       마크다운 헤더(#/##/###) 기준 계층 분할 후
+       헤더 경로를 각 청크 앞에 prepend
+       예) [# 제목 > ## 섹션] 본문 내용...
+       청크 크기 1000자, overlap 100자
+③ Load     : bge-m3 임베딩 → langchain_pg_embedding (HNSW 인덱스)
+              cmetadata: { source_id, seq }
+④ Callback : 완료 후 Backend로 콜백 전송
+```
 
 ### 오류 발생 시 예외 처리 전략
 
@@ -114,7 +134,7 @@
 
 ### 저장 위치 및 포맷
 
-- **저장 경로**: runpod의 PostgreSQL DB 서버에 현재 저장 중이며, 배포단계에서 AWS RDS로 이전 예정
+- **저장 경로**: AWS RDS (PostgreSQL + pgvector)
 - **저장 포맷**: Markdown 텍스트 형태
 - **인코딩**: httpx의 response.txt을 통해 HTTP 응답의 Content-Type 헤더에 charset이 있으면 해당 인코딩을 사용하며, 누락 시 UTF-8로 간주하여 진행
 
@@ -125,164 +145,266 @@
 - **중복 제거 기준**: 웹페이지 갱신을 대비하여 중복 제거하지 않음
 - **표준화 전략**: 마크다운 텍스트의 공백, HTML, 제목, 리스트, 코드펜스, 테이블, 빈줄을 정규식으로 정규화하여 청킹 전 노이즈 제거 수행
 
-<br><br>
+`<br><br>`
+
 ## 데이터베이스 설계
 
 ### 소개
 
-이 데이터베이스는 사용자가 제공하는 URL을 기반으로 질문에 답변을 수행할 수 있도록 데이터를 저장하고 관리하기 위해 설계되었으며, 사용자의 정보, 크롤링 데이터, QnA 채팅 기록, 북마크, 크롤링 된 데이터 기반의 컨텐츠를 포함합니다.
+이 데이터베이스는 사용자가 제공하는 URL을 기반으로 질문에 답변을 수행할 수 있도록 데이터를 저장하고 관리하기 위해 설계되었으며, 사용자 정보, 크롤링 데이터, QnA 채팅 기록, 인증 토큰, 확장 프로그램 연동 키, 벡터 임베딩을 포함합니다.
 
 ### 시스템 개요
 
-PostgreSQL를 사용하여 벡터 데이터와 관계형 데이터를 관리합니다.
+PostgreSQL (AWS RDS)을 사용하여 벡터 데이터와 관계형 데이터를 함께 관리합니다.
 
-| 테이블명 | 목적 |
-|---------|------|
-| user | 사용자 정보 |
-| chat | 사용자와 어시스턴트간의 대화 내용 저장 |
-| notebook | 대화 내용, 각종 컨텐츠 그룹 단위 |
-| contents | 페이지 데이터 기반 제작된 컨텐츠 |
-| quiz | 컨텐츠 - 퀴즈 데이터 |
-| flash_card | 컨텐츠 - 플래시 카드 데이터 |
-| source | URL기반 메타데이터 및 크롤링 데이터 |
-| directory | 소스 관리용 폴더 |
-| page_data | 청킹된 Vector 데이터 |
+| 테이블명                | 목적                                                 |
+| ----------------------- | ---------------------------------------------------- |
+| users                   | 사용자 정보                                          |
+| refresh_tokens          | JWT 리프레시 토큰 관리                               |
+| notebook                | 대화 내용, 소스 그룹 단위                            |
+| chat                    | 사용자와 어시스턴트 간의 대화 내용 및 출처 인용 저장 |
+| source                  | URL 기반 메타데이터 및 크롤링 데이터                 |
+| directory               | 소스 관리용 폴더 (트리 구조)                         |
+| extension_sync_key      | Chrome 확장 프로그램 연동 Sync Key                   |
+| langchain_pg_collection | LangChain PGVector 컬렉션 (자동 생성)                |
+| langchain_pg_embedding  | 청킹된 벡터 데이터 (자동 생성)                       |
 
 <br>
 
 ### 테이블 상세 명세
 
-#### User
+#### users
+
 사용자 정보 관리
 
-| 컬럼명 | 데이터 타입 | 제약조건 | 설명 |
-|--------|-----------|--------|------|
-| id | INTEGER | NOT NULL | 사용자 아이디 (PK) |
-| password | VARCHAR | NOT NULL | 비밀번호 |
-| email | VARCHAR | NOT NULL | 사용자 이메일 |
-| name | VARCHAR | NOT NULL | 사용자 이름 |
-| created_at | DATETIME | NOT NULL | 생성일 |
+| 컬럼명        | 데이터 타입 | 제약조건         | 설명                           |
+| ------------- | ----------- | ---------------- | ------------------------------ |
+| id            | INTEGER     | NOT NULL         | 사용자 아이디 (PK)             |
+| email         | VARCHAR     | NOT NULL, UNIQUE | 사용자 이메일                  |
+| password      | VARCHAR     | NULL             | 비밀번호 (OAuth 사용자는 NULL) |
+| name          | VARCHAR     | NOT NULL         | 사용자 이름                    |
+| auth_provider | VARCHAR     | NOT NULL         | 인증 방식 (local / google)     |
+| created_at    | DATETIME    | NOT NULL         | 생성일                         |
 
-#### Chat
+#### refresh_tokens
+
+JWT 리프레시 토큰 관리
+
+| 컬럼명     | 데이터 타입 | 제약조건         | 설명               |
+| ---------- | ----------- | ---------------- | ------------------ |
+| id         | INTEGER     | NOT NULL         | 토큰 아이디 (PK)   |
+| user_id    | INTEGER     | NOT NULL         | 사용자 아이디 (FK) |
+| token_hash | VARCHAR     | NOT NULL, UNIQUE | 토큰 해시값        |
+| expires_at | DATETIME    | NOT NULL         | 만료 시각          |
+| created_at | DATETIME    | NOT NULL         | 생성일             |
+
+#### notebook
+
+대화 내용, 소스 그룹 단위
+
+| 컬럼명     | 데이터 타입 | 제약조건 | 설명                    |
+| ---------- | ----------- | -------- | ----------------------- |
+| id         | INTEGER     | NOT NULL | 노트북 아이디 (PK)      |
+| title      | VARCHAR     | NOT NULL | 노트북 제목             |
+| user_id    | INTEGER     | NOT NULL | 사용자 아이디 (FK)      |
+| is_active  | BOOL        | NULL     | 활성화 상태 (삭제 여부) |
+| pinned     | BOOL        | NULL     | 상단 고정 여부          |
+| created_at | DATETIME    | NOT NULL | 생성일                  |
+
+#### chat
+
 사용자와 어시스턴트 간의 대화 내역
 
-| 컬럼명 | 데이터 타입 | 제약조건 | 설명 |
-|--------|-----------|--------|------|
-| id | INTEGER | NOT NULL | 대화 아이디 (PK) |
-| role | VARCHAR | NOT NULL | 사용자/어시스턴트 구분 |
-| message | VARCHAR | NOT NULL | 대화 내역 |
-| created_at | DATETIME | NOT NULL | 생성일 |
+| 컬럼명           | 데이터 타입 | 제약조건 | 설명                                                                 |
+| ---------------- | ----------- | -------- | -------------------------------------------------------------------- |
+| id               | INTEGER     | NOT NULL | 대화 아이디 (PK)                                                     |
+| role             | VARCHAR     | NOT NULL | 발화자 구분 (user / assistant)                                       |
+| message          | VARCHAR     | NOT NULL | 대화 내역                                                            |
+| notebook_id      | INTEGER     | NOT NULL | 노트북 아이디 (FK)                                                   |
+| reference_source | JSON        | NULL     | 답변 근거 청크 출처 목록 [{source_id, seq, citation_no, url, title}] |
+| created_at       | DATETIME    | NOT NULL | 생성일                                                               |
 
-#### Notebook
-대화 내용, 컨텐츠, 수집데이터그룹
+#### directory
 
-| 컬럼명 | 데이터 타입 | 제약조건 | 설명 |
-|--------|-----------|--------|------|
-| id | INTEGER | NOT NULL | 노트북 아이디 (PK) |
-| title | VARCHAR | NOT NULL | 노트북 제목 |
-| user_id | INTEGER | NOT NULL | 사용자 아이디 (FK) |
-| is_active | BOOL | NULL | 활성화 상태 (삭제여부) |
-| created_at | DATETIME | NOT NULL | 생성일 |
+소스 데이터 관리용 폴더 — 트리 구조
 
-#### Directory
-페이지 소스 데이터 관리용 폴더 (북마크 폴더) - 폴더 안에 소스 트리 구조로 관리
+| 컬럼명      | 데이터 타입 | 제약조건 | 설명                                |
+| ----------- | ----------- | -------- | ----------------------------------- |
+| id          | INTEGER     | NOT NULL | 디렉토리 아이디 (PK)                |
+| title       | VARCHAR     | NOT NULL | 폴더명                              |
+| parent_id   | INTEGER     | NULL     | 상위 디렉토리 아이디 (FK, self-ref) |
+| notebook_id | INTEGER     | NOT NULL | 노트북 아이디 (FK)                  |
 
-| 컬럼명 | 데이터 타입 | 제약조건 | 설명 |
-|--------|-----------|--------|------|
-| id | INTEGER | NOT NULL | 디렉토리 아이디 (PK) |
-| parent_id | INTEGER | NOT NULL | 디렉토리 아이디 (FK) |
-| notebook_id | INTEGER | NOT NULL | 노트북 아이디 (FK) |
+#### source
 
-#### Source
-URL기반 수집 데이터
+URL 기반 수집 데이터
 
-| 컬럼명 | 데이터 타입 | 제약조건 | 설명 |
-|--------|-----------|--------|------|
-| id | INTEGER | NOT NULL | 소스 아이디 (PK) |
-| title | VARCHAR | NOT NULL | 소스 제목 |
-| url | VARCHAR | NOT NULL | 소스 URL |
-| summary | VARCHAR | NULL | 수집 데이터 요약 정보 |
-| notebook_id | INTEGER | NOT NULL | 노트북 아이디 (FK) |
-| directory_id | INTEGER | NOT NULL | 부모 디렉토리 아이디 (FK) |
-| created_at | DATETIME | NOT NULL | 생성일 |
+| 컬럼명       | 데이터 타입 | 제약조건 | 설명                                               |
+| ------------ | ----------- | -------- | -------------------------------------------------- |
+| id           | INTEGER     | NOT NULL | 소스 아이디 (PK)                                   |
+| title        | VARCHAR     | NOT NULL | 소스 제목                                          |
+| url          | VARCHAR     | NOT NULL | 소스 URL                                           |
+| raw          | TEXT        | NULL     | 크롤링 원문                                        |
+| refined      | TEXT        | NULL     | vLLM 정제 텍스트                                   |
+| summary      | VARCHAR     | NULL     | 수집 데이터 요약                                   |
+| status       | VARCHAR     | NOT NULL | 크롤링 상태 (pending / processing / done / failed) |
+| is_active    | BOOL        | NOT NULL | RAG 검색 대상 포함 여부                            |
+| notebook_id  | INTEGER     | NOT NULL | 노트북 아이디 (FK)                                 |
+| directory_id | INTEGER     | NULL     | 부모 디렉토리 아이디 (FK)                          |
+| created_at   | DATETIME    | NOT NULL | 생성일                                             |
 
-#### Contents
-수집 데이터 기반 생성된 각종 콘텐츠 그룹
+#### extension_sync_key
 
-| 컬럼명 | 데이터 타입 | 제약조건 | 설명 |
-|--------|-----------|--------|------|
-| id | INTEGER | NOT NULL | 콘텐츠 아이디 (PK) |
-| type | VARCHAR | NOT NULL | 콘텐츠 타입 |
-| notebook_id | INTEGER | NOT NULL | 노트북 아이디 (FK) |
+Chrome 확장 프로그램 연동 Sync Key
 
-#### Questions
-콘텐츠 질문
+| 컬럼명      | 데이터 타입 | 제약조건         | 설명                         |
+| ----------- | ----------- | ---------------- | ---------------------------- |
+| id          | INTEGER     | NOT NULL         | 키 아이디 (PK)               |
+| user_id     | INTEGER     | NOT NULL, UNIQUE | 사용자 아이디 (FK)           |
+| sync_key    | VARCHAR     | NOT NULL, UNIQUE | 동기화 키 값                 |
+| notebook_id | INTEGER     | NOT NULL         | 연동 대상 노트북 아이디 (FK) |
+| expires_at  | DATETIME    | NOT NULL         | 만료 시각 (발급 후 15분)     |
+| created_at  | DATETIME    | NOT NULL         | 생성일                       |
 
-| 컬럼명 | 데이터 타입 | 제약조건 | 설명 |
-|--------|-----------|--------|------|
-| id | INTEGER | NOT NULL | 질문 아이디 (PK) |
-| question | VARCHAR | NOT NULL | 콘텐츠 질문 |
-| content_id | INTEGER | NOT NULL | 콘텐츠 아이디 (FK) |
+#### langchain_pg_collection / langchain_pg_embedding
 
-#### Answers
-콘텐츠 답변
+LangChain PGVector 자동 생성 테이블 — 청킹된 벡터 데이터 저장
 
-| 컬럼명 | 데이터 타입 | 제약조건 | 설명 |
-|--------|-----------|--------|------|
-| id | INTEGER | NOT NULL | 답변 아이디 (PK) |
-| answer | VARCHAR | NOT NULL | 콘텐츠 답변 |
-| hint | VARCHAR | NULL | 답변에 대한 힌트 |
-| question_id | INTEGER | NOT NULL | 질문 아이디 (FK) |
-| is_correct | BOOL | NOT NULL | 해당 답변의 정답여부 |
+| 컬럼명        | 데이터 타입  | 설명                                 |
+| ------------- | ------------ | ------------------------------------ |
+| document      | TEXT         | 청크 텍스트 (헤더 경로 포함)         |
+| embedding     | VECTOR(1024) | bge-m3 임베딩 벡터                   |
+| cmetadata     | JSONB        | `{ "source_id": int, "seq": int }` |
+| collection_id | UUID         | langchain_pg_collection FK           |
 
-#### page_data
-벡터 데이터
+`<br><br>`
 
-| 컬럼명 | 데이터 타입 | 제약조건 | 설명 |
-|--------|-----------|--------|------|
-| id | INTEGER | NOT NULL | 데이터 아이디 (PK) |
-| source_id | VARCHAR | NOT NULL | 원문 소스 데이터 정보 |
-| chunk_text | TEXT | NOT NULL | 청킹된 데이터 원본 |
-| embedding | VECTOR | NOT NULL | 벡터화 데이터 |
-| payload | JSON | NOT NULL | 성능 향상 용 메타데이터 |
+## 서비스 아키텍처
 
-<br><br>
+두 가지 흐름으로 구분합니다.
+
+### ① 채팅 및 CRUD
+
+```
+[Frontend — Next.js 16]
+       │ REST API / SSE
+       ▼
+[Backend — FastAPI + LangGraph] ←──────────────────── [AWS RDS]
+       │                                               (노트북, 채팅, 소스
+       │  RunPod Serverless                             CRUD 직접 접근)
+       ├── EXAONE-4.0-32B-FP8     (답변 생성)
+       ├── BAAI/bge-m3            (쿼리 임베딩)
+       └── bge-reranker-v2-m3     (검색 결과 리랭킹)
+```
+
+### ② ETL 파이프라인 (URL 등록 → 크롤링 → 벡터 적재)
+
+```
+[Chrome 확장 (Bookalpie)] ──POST /directory/sync──▶ ┐
+                                                       ▼
+[Frontend — Next.js 16]  ───── URL 등록 요청 ──────▶ [Backend]
+                                                           │ POST /crawl
+                                                           ▼
+                                                   [Data Service — FastAPI]
+                                                           │
+                                                           │  RunPod Serverless
+                                                           ├── BAAI/bge-m3              (청크 임베딩)
+                                                           └── Llama-3.1-8B-Instruct    (refine / summarize)
+                                                           │
+                                                           ▼
+                                                   [AWS RDS — langchain_pg_embedding 적재]
+                                                           ↑ (벡터 검색 시 Backend도 직접 조회)
+```
+
+<br>
+
+## 기술 스택
+
+| 서비스          | 기술                                                                    |
+| --------------- | ----------------------------------------------------------------------- |
+| Frontend        | Next.js 16, React 19, TypeScript, Zustand, Zod, Tailwind CSS 4          |
+| Extension       | Chrome MV3, React 19, Vite + CRXJS, Zustand, dnd-kit                    |
+| Backend         | FastAPI, LangGraph 1.0, SQLAlchemy, JWT, Google OAuth                   |
+| Data Service    | FastAPI, Trafilatura, Playwright, HierarchicalPrependChunker            |
+| AI 인프라       | RunPod Serverless (EXAONE-4.0-32B-FP8, BAAI/bge-m3, bge-reranker-v2-m3) |
+| Database        | PostgreSQL (AWS RDS) + pgvector, Alembic                                |
+| Package Manager | pnpm (Frontend / Extension), uv (Python 서비스)                         |
+
+`<br><br>`
+
+## RAG 파이프라인
+
+LangGraph 기반 QA 에이전트의 노드 흐름:
+
+```
+질문 입력
+  → classify_intent       : 질문 유형 분류 (simple / complex / casual)
+  → [complex] decompose_query : 서브 질문으로 분해
+  → retrieve_sources      : pgvector 유사도 검색 + bge-reranker-v2-m3 리랭킹
+  → [검색 실패] rewrite_query : 쿼리 재작성 후 재검색
+  → generate_answer       : 답변 생성 (EXAONE / GPT-4o-mini / GPT-5.4-mini 스트리밍)
+  → save_chat             : 답변 및 출처 인용 DB 저장
+```
+
+`<br><br>`
+
+## Chrome 확장 프로그램 — Bookalpie
+
+- **버전**: v3.0.0 (Chrome Manifest V3)
+- **주요 기능**
+  - 계층형 북마크 폴더 트리 탐색 및 드래그앤드롭 정렬
+  - 실시간 키워드 검색 필터
+  - Sync Key 인증으로 Kalpie 노트북과 연동
+  - 선택한 북마크를 노트북에 전송 → Data Service에서 자동 크롤링·임베딩 처리
+- **권한**: `bookmarks`, `storage`, `tabs`
+
+`<br><br>`
+
 ## 데이터 전처리 결과서
 
 ### 개요
 
-**전처리 목적**: Open LLM 모델의 성능 평가 데이터셋 구축 및 NotebookLM 방식의 웹 소스 추가 기능에 대한 POC
+**전처리 목적**: 실제 웹 URL을 대상으로 크롤링 → 정제 → 청킹 → 임베딩 파이프라인의 동작을 검증하고, RAG 파이프라인의 검색 품질 및 응답 신뢰도(Faithfulness)를 평가하기 위한 테스트 데이터셋을 구축
 
-**평가용 데이터셋**: 한국어 위키백과 내 인공지능, 기계학습, 딥러닝 등 관련 문서 15개를 기반으로 368건의 정제된 Q&A 쌍(v3) 구축
+### 테스트 데이터 구성
 
-### 평가용 데이터 구성
+#### 크롤링 테스트 URL (`data/test/urls.py`)
 
-| 항목명 | 설명 | 예시 |
-|--------|------|------|
-| content_id | 문서 식별자 | doc_001 |
-| title | 위키백과 문서 제목 | 인공지능 |
-| section | 추출된 섹션 헤더 | 강인공지능과 약인공지능 |
-| context chunk | 청크 단위 컨텍스트 | "강인공지능(strong AI)은..." |
-| question | 합성 생성된 평가용 질문 | "강인공지능의 정의를 설명해주세요." |
-| reference_answer | 평가용 정답 | "강인공지능은 인간과 유사한..." |
-| question_type | 질문 유형 | definition, summarization 등 |
+기술 블로그, GitHub, Wikipedia, 뉴스, 커뮤니티, 공공/기업 사이트 등 한국어·영어 혼합 도메인 **51개 URL**을 수집하여 HybridClient의 정적/동적 크롤링 전략 및 전처리 파이프라인 전 구간을 검증
+
+#### 리트리버 파이프라인 테스트셋 (`data/test/testset.json`)
+
+위 URL 기반으로 크롤링·청킹·임베딩된 소스에 대해 청킹 전략, 임베딩 품질, 리트리버 검색 정확도를 평가하기 위한 **47개 Q&A 쌍**
+
+| 항목         | 설명                     | 예시                                                    |
+| ------------ | ------------------------ | ------------------------------------------------------- |
+| question     | 소스 기반 사실 확인 질문 | "nanochat 프로젝트는 무엇인가요?"                       |
+| ground_truth | 정답 텍스트              | "nanochat은 LLM 훈련을 위한 가장 간단한 실험 도구로..." |
+
+#### RAG 품질 평가 테스트셋 (`backend/agent/testset.json`)
+
+검색 품질(Context Precision/Recall)과 응답 신뢰도(Faithfulness)를 평가하기 위한 **50개 Q&A 쌍** — 복합 질문 형태로 구성하여 멀티홉 검색 및 답변 정확도 검증
+
+| 항목         | 설명                | 예시                                                                    |
+| ------------ | ------------------- | ----------------------------------------------------------------------- |
+| question     | 복합 관점 포함 질문 | "Notion AI가 제공하는 핵심 기능들과 관리자가 데이터를 보호하는 방식은?" |
+| ground_truth | 상세 정답 텍스트    | "Notion AI는 AI 노트로 회의 기록을 요약하고..."                         |
 
 <br>
 
-### 전처리 프로세스 개요
+### 전처리 파이프라인 요약
 
-**전체 흐름도**: ① 크롤링 → ② 전처리 → ③ 텍스트 정제 → ④ 분할 → ⑤ 데이터 합성 → ⑥ 적재
+**전체 흐름도**: ① 크롤링 → ② 정규화 → ③ 정제(vLLM) → ④ 요약(vLLM) → ⑤ 청킹 → ⑥ 임베딩 → ⑦ 적재
 
-**전처리 파이프라인 요약**:
-
-| 단계 | 목적 | 수행 작업 | 사용 도구/라이브러리 |
-|------|------|---------|-------------------|
-| 크롤링 | 웹 소스 수집 | Wikipedia Crawling | Requests, BS4 |
-| 전처리 | 비정상 데이터 제거 | 영어와 한국어를 제외한 다른 문자, 문서와 의미론적으로 다른 글자 제거 | Python, Claude cli |
-| 텍스트 정제 | 노이즈 제거 | 사이드 바, 페이지 네비게이션 등 잔여물 및 특수문자 정리 | Re, Python |
-| 분할 | 마크다운 단위 청킹 | 마크다운 (#) 기준 분할 및 문장 단위 재분할 | Python |
-| 데이터 합성 | LLM-as-Judge 평가 데이터셋 구축 | 컨텍스트 기반 QA 및 reference_answer 합성 데이터 생성 | Claude cli |
-| 적재 | 저장 및 버전 관리 | Csv 형식으로 저장 및 버저닝 | Os, Pathlib |
+| 단계   | 목적           | 수행 작업                                       | 사용 도구/라이브러리         |
+| ------ | -------------- | ----------------------------------------------- | ---------------------------- |
+| 크롤링 | 웹 소스 수집   | 정적 크롤링 → 동적 폴백                        | Trafilatura, Playwright      |
+| 정규화 | 노이즈 제거    | 공백·HTML·특수문자 정규화                     | MarkdownPreprocessor         |
+| 정제   | 내용 품질 향상 | 불필요 요소 제거 및 구조화                      | vLLM (Llama-3.1-8B-Instruct) |
+| 요약   | 소스 요약 생성 | 핵심 내용 요약                                  | vLLM (Llama-3.1-8B-Instruct) |
+| 청킹   | 텍스트 분할    | 마크다운 헤더 기준 계층 분할, 헤더 경로 prepend | HierarchicalPrependChunker   |
+| 임베딩 | 벡터화         | 청크 텍스트 → 1024차원 벡터                    | BAAI/bge-m3 (RunPod)         |
+| 적재   | DB 저장        | HNSW 인덱스로 pgvector 적재                     | langchain_pg_embedding       |
 
 <br>
 
@@ -301,25 +423,20 @@ URL기반 수집 데이터
 
 - **압도적인 다국어(한국어-영어) RAG 성능**: 설계 단계부터 한국어와 영어 데이터 비중을 1:1로 맞춘 14조 개의 토큰을 학습하여, 두 언어 간의 지식 불균형을 원천적으로 해결한 최고 수준의 모델임
 
-#### 선정 모델 및 향후 계획
+#### 선정 모델 및 배포
 
 **선정 모델**: LGAI-EXAONE/EXAONE-4.0-32B-FP8
+
 - 기술적 정확성과 언어적 균형을 위해 LGAI-EXAONE/EXAONE-4.0-32B 모델에 FP8(8비트) 양자화를 적용한 버전을 선정
 - 양자화를 통해 모델 가중치가 차지하는 메모리 사용량을 절감하여, 남은 VRAM 공간을 RAG의 긴 문서 처리를 위한 KV 캐시로 확보 가능
 
+**배포**: RunPod Serverless에 vLLM 기반으로 배포 완료. PagedAttention 기술을 통해 다중 사용자 접속 시 메모리 파편화 방지
+
 **활용방안**:
+
 - 웹 소스(HTML 등)를 파싱 및 시맨틱 청킹(Semantic Chunking)하여 벡터 데이터베이스에 저장
 - 다국어 웹 문서를 크로스 참조하여 방대한 컨텍스트 속에서 핵심 정보 추출
 - EXAONE 4.0의 추론 모드를 결합해 정확한 사실 관계 기반의 구조화된 문서 요약 및 QA 서비스 제공
-
-**향후 계획**:
-1. **실사용 환경 평가**: 테스트 데이터로 실제 서비스 환경에서의 RAG 답변 정확도를 평가. 상용 폐쇄형 API(예: GPT-4o)를 '평가자(LLM-as-a-Judge)'로 활용한 대조군 실험 진행 중
-
-2. **경량화된 모델 고려**: 단순 정보 추출이나 높은 처리 속도가 요구되는 구간에서 TinyBERT나 EXAONE-3.0 (7.8B) 같은 경량화 모델의 하이브리드 도입 검토
-
-3. **다양한 환경 비교 평가**: 단일 GPU(24-32GB) 단일 환경과 A100/H100 고성능 멀티 GPU, 또는 RTX5090 2개 이상 활용한 병렬 처리 간의 속도 및 가성비 비교 평가
-
-4. **vLLM 서빙 및 API 구축**: Docker 컨테이너 기반의 vLLM 프레임워크를 RunPod에 배포하여 FastAPI 기반의 비동기 스트리밍 API 구축. vLLM의 PagedAttention 기술을 통해 다중 사용자 접속 시의 메모리 파편화 방지
 
 <br>
 
@@ -335,48 +452,69 @@ URL기반 수집 데이터
 
 #### 후보 모델 비교
 
-| 항목 | BAAI/bge-m3 | intfloat/multilingual-e5-large |
-|--------|-----------|--------|
-| 벡터 차원 | 1024 | 1024 |
-| 최대 토큰 | 8,192 | 512 |
-| 다국어 지원 | 100+ 언어 | 100+ 언어 |
-| 입력 전처리 | 불필요 | "query: " prefix 필수 |
-| MTEB 한국어 Retrieval | 상위권 | 중상위권 |
-| 모델 크기 | ~2.2GB | ~2.2GB |
-| 추론 프레임워크 | sentence-transformers | sentence-transformers |
+| 항목                  | BAAI/bge-m3           | intfloat/multilingual-e5-large |
+| --------------------- | --------------------- | ------------------------------ |
+| 벡터 차원             | 1024                  | 1024                           |
+| 최대 토큰             | 8,192                 | 512                            |
+| 다국어 지원           | 100+ 언어             | 100+ 언어                      |
+| 입력 전처리           | 불필요                | "query: " prefix 필수          |
+| MTEB 한국어 Retrieval | 상위권                | 중상위권                       |
+| 모델 크기             | ~2.2GB                | ~2.2GB                         |
+| 추론 프레임워크       | sentence-transformers | sentence-transformers          |
 
 #### 선정 결과: BAAI/bge-m3
 
 **선정사유**:
+
 - **최대 토큰 수 8,192**: 현재 청킹 설정(1,000자, overlap 100자) 기준으로 청크가 잘릴 위험이 없음. multilingual-e5-large는 512토큰 제한으로 긴 청크에서 정보 손실 우려
-
 - **전처리 불필요**: e5 계열은 쿼리와 문서에 각각 "query: ", "passage: " prefix를 붙여야 하므로 인덱싱과 검색 시 서로 다른 전처리 로직이 필요. bge-m3는 prefix 없이 동일한 방식으로 인코딩하므로 파이프라인이 단순함
-
 - **다국어 Retrieval 성능**: MTEB 벤치마크에서 한국어를 포함한 다국어 검색 태스크에서 상위 성능을 보이며, Dense + Sparse + ColBERT 멀티 표현 지원으로 확장 가능성이 높음
-
 - **검색-인덱싱 모델 일치**: retriever에서 쿼리 임베딩 시 동일한 bge-m3 모델을 사용하여 인덱싱과 검색 간 벡터 공간 불일치 문제를 원천 방지
 
 #### 시스템 통합 구조
 
 **인덱싱**: 크롤링 텍스트 → 청킹(1000자) → bge-m3 임베딩(1024d) → pgvector 저장 (HNSW 인덱스)
 
-**검색**: 사용자 쿼리 → bge-m3 임베딩(1024d) → 코사인 유사도 검색 → Top-K 반환
+**검색**: 사용자 쿼리 → bge-m3 임베딩(1024d) → 코사인 유사도 검색 → Top-K 반환 → bge-reranker-v2-m3 리랭킹
 
 **설정 상세**:
+
 - 배치 크기: 32
 - 벡터 정규화: 활성화 (코사인 유사도 기반 검색에 최적화)
 - DB 인덱스: HNSW (m=16, ef_construction=64, vector_cosine_ops)
 
-#### 향후 계획
+#### Reranker
 
-| 단계 | 내용 |
-|------|------|
-| 평가 체계 구축 | RAGAS 기반 context_precision / context_recall 자동 평가 파이프라인 구축 중. TestsetGenerator를 활용한 테스트셋 자동 생성 예정 |
-| OpenAI 임베딩 기준선 설정 | text-embedding-3-large (3072d) / text-embedding-3-small (1536d)를 baseline으로 설정하여 검색 정확도 기준점 확보 |
-| 로컬 모델 비교 실험 | GPU 환경(RunPod) 확보 후 bge-m3 vs multilingual-e5-large 외에도 gte-multilingual-base, multilingual-e5-large-instruct 등 최신 로컬 모델 후보 추가 비교 |
-| Reranker 도입 | 1차 벡터 검색(top-k) 결과를 Cross-Encoder 기반 리랭커로 재정렬하여 정밀도 향상. BAAI/bge-reranker-v2-m3 또는 ms-marco-MiniLM-L-12-v2 검토 |
-| 비용 효율 분석 | 로컬 GPU 운용 비용(RunPod 시간당 단가 × 추론량) vs OpenAI API 비용(토큰당 단가 × 호출량) 비교 |
-| 최종 모델 확정 | 정확도·비용·지연시간 관점에서 최적 모델 확정. API 모델이 우세할 경우 로컬 모델 대신 API 전환도 고려 |
-| 청킹 전략 연동 최적화 | 확정된 임베딩 모델에 맞춰 청킹 파라미터(chunk_size, overlap, splitter 종류) 조합별 검색 품질 실험 |
+검색 결과의 정밀도 향상을 위해 **BAAI/bge-reranker-v2-m3** Cross-Encoder 기반 리랭커를 도입하여 1차 벡터 검색(top-k) 결과를 재정렬합니다. RunPod Serverless에 배포 완료.
 
-<br><br>
+`<br><br>`
+
+### RAG 파이프라인 평가
+
+> 평가 프레임워크: deepeval / Judge 모델: GPT-4o-mini / 테스트셋: `backend/agent/testset.json` (50개 Q&A)
+
+#### RAG 노드 개선 이력
+
+| 버전      | 주요 변경사항                                                                   |  Faithfulness  | Answer Relevancy |
+| --------- | ------------------------------------------------------------------------------- | :-------------: | :--------------: |
+| BASELINE  | 기준 (2-intent, 기본 검색)                                                      |      0.916      |      0.773      |
+| v1        | 3-intent 분류, reranker(min_score=0.05), rewrite_query 노드, 소스 인용 프롬프트 |      0.867      |      0.811      |
+| v2        | v1 + 할루시네이션 제거 프롬프트 강화                                            |      0.889      |      0.788      |
+| v3        | 3-intent + reranker 최적화 + 프롬프트 수정                                      | **0.919** |      0.856      |
+| v4        | decompose_query 노드, simple rewrite 스킵, sub-query별 rerank, 재시도 라우팅    |      0.881      | **0.933** |
+| v5 (최종) | sub-query rerank 최적화                                                         |      0.877      |      0.924      |
+
+#### 모델별 최종 성능 비교 (v5 파이프라인 기준)
+
+| 모델               | Contextual Precision | Contextual Recall | Faithfulness | Answer Relevancy |
+| ------------------ | :------------------: | :---------------: | :----------: | :--------------: |
+| gpt-4o             |        0.882        |       0.886       |    0.916    |      0.935      |
+| gpt-5-mini         |        0.855        |       0.848       |    0.903    |      0.861      |
+| gpt-4o-mini (기본) |        0.843        |       0.834       |    0.898    |      0.804      |
+| EXAONE-4.0-32B     |        0.709        |       0.636       |    0.891    |      0.655      |
+
+---
+
+## 라이선스
+
+MIT License. See [LICENSE](../LICENSE) for details.
